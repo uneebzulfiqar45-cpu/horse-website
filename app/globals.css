@@ -1,0 +1,934 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Mona Sans';
+  font-style: normal;
+  font-weight: 200 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/monasans/v4/o-0ZIpQmx24alC5A4PNr4C5OaxRsfNNlKbCePevttnOmDyw.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  font-style: italic;
+  font-weight: 200 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/monasans/v4/o-0bIpQmx24alC5A4PNr4C5OaxRsb-V7KbCePevttnOmDyylVw.woff2) format('woff2');
+}
+
+/* ============================================
+   HORSE VETERINARY PRACTICE — DESIGN SYSTEM
+   Premium 3-Layer: Light + Beige + Dark Gold
+   ============================================ */
+
+
+:root {
+  /* ── Layer 1: Light ─────────────────────── */
+  --bg-light: #F5F5F2;
+  --bg-white: #FFFFFF;
+
+  /* ── Layer 2: Beige ─────────────────────── */
+  --bg-beige: #EAE6DC;
+
+  /* ── Layer 3: Dark Green ────────────────── */
+  --bg-dark: #0F2A1E;
+  --bg-dark-2: #1F3D2B;
+  --bg-card-dark: #1E3A2F;
+
+  /* ── Legacy aliases (kept for compat) ───── */
+  --bg-primary: #F5F5F2;
+  --bg-secondary: #EAE6DC;
+  --bg-card: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+  --bg-hover: #1F3D2B;
+  --bg-aesthetic: #F5F5F2;
+  --bg-alt-1: #F5F5F2;
+  --bg-alt-2: #EAE6DC;
+
+  /* ── Gold Accent ────────────────────────── */
+  --gold: #C8A96A;
+  --gold-light: #B89650;
+  --gold-lighter: #E8D5A3;
+  --gold-dark: #8B6914;
+  --gold-darker: #0F2A1E;
+  --gold-muted: rgba(200, 169, 106, 0.15);
+  --gold-glow: rgba(200, 169, 106, 0.25);
+
+  --forest: #1F3D2B;
+
+  /* ── Text (Light sections) ───────────────── */
+  --text-primary: #1C1C1C;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --text-subtle: #9CA3AF;
+
+  /* ── Text (Dark sections) ────────────────── */
+  --text-on-dark: #FFFFFF;
+  --text-on-dark-secondary: #A7B3A7;
+
+  /* ── Border ─────────────────────────────── */
+  --border: rgba(28, 28, 28, 0.08);
+  --border-hover: #C8A96A;
+  --border-strong: rgba(28, 28, 28, 0.15);
+
+  /* ── Status ──────────────────────────────── */
+  --emergency: #EF4444;
+  --emergency-light: #E74C3C;
+  --emergency-glow: rgba(192, 57, 43, 0.1);
+  --success: #27AE60;
+  --warning: #F39C12;
+  --info: #2980B9;
+
+  /* ── Radius ─────────────────────────────── */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────── */
+  --shadow-gold: 0 10px 30px rgba(200, 169, 106, 0.2);
+  --shadow-gold-hover: 0 15px 40px rgba(200, 169, 106, 0.35);
+  --shadow-card: 0 4px 20px rgba(28, 28, 28, 0.06);
+  --shadow-elevated: 0 20px 60px rgba(28, 28, 28, 0.1);
+
+  /* ── Typography ─────────────────────────── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Mona Sans', 'Inter', sans-serif;
+  --font-accent: 'Mona Sans', 'Outfit', sans-serif;
+
+  /* ── Transitions ────────────────────────── */
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-body);
+}
+
+/* ============================================
+   BASE RESET & GLOBAL STYLES
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  cursor: none;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a, button, [role="button"], input, textarea, select, label {
+  cursor: none;
+}
+
+
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-beige);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+  background-color: var(--gold-muted);
+  color: var(--gold-light);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-gold {
+  color: var(--gold);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--gold-lighter) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.font-serif-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.border-gold {
+  border-color: var(--border);
+}
+
+/* Section spacing matching RideUp exactly */
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.section-sm {
+  padding: clamp(2rem, 4vw, 4rem) 0;
+}
+
+/* Container — centered, symmetric padding */
+.container-custom {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+  padding-right: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* Gold line divider */
+.gold-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+
+.gold-divider-center {
+  margin: 1rem auto;
+}
+
+/* Section label / Pill Badge — Light sections */
+.section-label, .pill-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+  transition: all var(--transition);
+}
+
+.pill-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gold);
+}
+
+.pill-badge:hover {
+  border-color: var(--gold);
+  background: var(--gold-muted);
+}
+
+/* Pill badge on dark sections */
+.pill-badge-dark {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-on-dark);
+}
+
+.pill-badge-dark:hover {
+  border-color: var(--gold);
+  background: rgba(200, 169, 106, 0.1);
+}
+
+/* ============================================
+   CARD COMPONENTS
+   ============================================ */
+
+.card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+.card-dark {
+  background: var(--bg-card-dark);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.card-dark:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border-radius: 100px;
+  padding: 18px 48px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.btn > * {
+  position: relative;
+  z-index: 20;
+}
+
+.btn::before, .btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.btn::before { left: 0; }
+.btn::after { right: 0; }
+
+.btn:hover::before, .btn:hover::after {
+  width: 50%;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Primary: Gold fill */
+.btn-primary {
+  background: var(--gold);
+  color: #000000;
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  color: #000000;
+  border-color: var(--gold-light);
+  box-shadow: 0 10px 30px rgba(200, 169, 106, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  color: #ffffff !important;
+  background: var(--gold-dark);
+}
+
+/* Secondary: Now also follows Gold theme as requested */
+.btn-secondary {
+  background: var(--gold);
+  color: #000000;
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+.btn-secondary:hover {
+  background: var(--gold-light);
+  color: #000000;
+  box-shadow: 0 10px 30px rgba(200, 169, 106, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  color: #ffffff !important;
+  background: var(--gold-dark);
+}
+
+/* Secondary on dark sections: Also follows Gold theme */
+.btn-secondary-dark {
+  background: var(--gold);
+  color: #000000;
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+.btn-secondary-dark:hover {
+  background: var(--gold-light);
+  color: #000000;
+  box-shadow: 0 10px 30px rgba(200, 169, 106, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-secondary-dark:active {
+  color: #ffffff !important;
+  background: var(--gold-dark);
+}
+
+/* Emergency: Red → darker on hover */
+.btn-emergency {
+  background: var(--emergency);
+  color: white;
+  border-color: var(--emergency);
+  animation: emergency-pulse 2s infinite;
+}
+
+.btn-emergency:hover {
+  background: var(--emergency-light);
+  border-color: var(--emergency-light);
+  box-shadow: 0 0 30px var(--emergency-glow);
+  animation: none;
+}
+
+/* Ghost */
+.btn-ghost {
+  background: transparent;
+  color: var(--gold);
+  border-color: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--gold-muted);
+  border-color: var(--gold);
+  color: #000000;
+}
+
+.btn-ghost:active {
+  color: #ffffff !important;
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+.form-input {
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-muted);
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes emergency-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--emergency-glow); }
+  50% { box-shadow: 0 0 0 8px transparent; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gold-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes counter-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Initial hidden state for scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   GRADIENT BACKGROUNDS
+   ============================================ */
+
+.gradient-dark {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+}
+
+.gradient-hero {
+  background: radial-gradient(ellipse at 20% 50%, var(--gold-muted) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, var(--gold-glow) 0%, transparent 50%),
+              linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+/* ============================================
+   SECTION BACKGROUNDS
+   ============================================ */
+
+.bg-section-alt {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ============================================
+   LOADER / SKELETON
+   ============================================ */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-elevated) 25%,
+    var(--bg-hover) 50%,
+    var(--bg-elevated) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: var(--radius);
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   IMAGE OVERLAYS
+   ============================================ */
+
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(9, 20, 19, 0.7) 100%
+  );
+  pointer-events: none;
+}
+
+/* ============================================
+   MOBILE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-inline {
+    width: auto;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* ============================================
+   FOCUS STYLES (Accessibility)
+   ============================================ */
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+/* Custom Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* ============================================
+   PREMIUM BUTTON HOVER ANIMATIONS
+   ============================================ */
+
+/* Ripple effect on all buttons */
+.btn, button, a {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after, button.ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.btn:hover::after, button.ripple:hover::after {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Glow lift — applied to most CTA buttons */
+.btn-glow {
+  transition: box-shadow 0.3s ease, transform 0.2s ease !important;
+}
+.btn-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(200, 163, 95, 0.35) !important;
+}
+
+/* Fade-in shimmer on hover for gold buttons */
+@keyframes btn-shimmer {
+  0% { left: -100%; }
+  100% { left: 150%; }
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.25) 50%, transparent 100%);
+  transition: none;
+  pointer-events: none;
+}
+
+.btn-shimmer:hover::before {
+  animation: btn-shimmer 0.6s ease forwards;
+}
+
+/* ============================================
+   PAGE SECTION ENTRANCE — SCROLL ANIMATION
+   ============================================ */
+
+.section-enter {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-enter.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children inside a container */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger.in-view > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.05s; }
+.stagger.in-view > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+.stagger.in-view > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.25s; }
+.stagger.in-view > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.35s; }
+
+/* ============================================
+   IMAGE HOVER GLOW EFFECT
+   ============================================ */
+
+.img-hover-glow {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+.img-hover-glow:hover {
+  box-shadow: 0 20px 60px rgba(200,163,95,0.2);
+  transform: translateY(-4px);
+}
+
+/* ============================================
+   LINK UNDERLINE ANIMATION
+   ============================================ */
+
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   GOLD CARD HOVER BORDER GLOW
+   ============================================ */
+
+.card-hover-glow {
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+}
+.card-hover-glow:hover {
+  box-shadow: 0 0 0 1.5px rgba(200, 169, 106, 0.5), 0 12px 40px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+/* ============================================
+   3-LAYER SECTION SYSTEM
+   Light → Beige → Dark = Premium Depth
+   ============================================ */
+
+/* Layer 1: Light */
+.section-light {
+  background: var(--bg-light);
+  border-top: 1px solid rgba(15, 42, 30, 0.08);
+}
+
+/* Layer 2: Beige / Warm */
+.section-beige {
+  background: var(--bg-beige);
+  border-top: 1px solid rgba(15, 42, 30, 0.08);
+}
+
+/* Layer 3: Dark Green Hero */
+.section-dark {
+  background-color: var(--bg-dark);
+  background-image: 
+    linear-gradient(to right, rgba(15, 42, 30, 0.4) 0%, rgba(15, 42, 30, 0.95) 75%),
+    url('/images/dark_horse_bg.png');
+  background-attachment: fixed;
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--text-on-dark);
+  border-top: 1px solid rgba(200, 169, 106, 0.15);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark h5,
+.section-dark h6 {
+  color: var(--text-on-dark);
+}
+
+.section-dark p {
+  color: var(--text-on-dark-secondary);
+}
+
+/* ============================================
+   FOOTER — ALWAYS DARK
+   ============================================ */
+
+footer {
+  background: var(--bg-dark) !important;
+  color: var(--text-on-dark) !important;
+}
