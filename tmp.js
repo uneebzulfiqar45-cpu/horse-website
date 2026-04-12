@@ -9,4 +9,3 @@ if (marginPaddingExtract) {
     console.log('Padding usages found in embedded styles:', unique.slice(0, 15));
 } else {
     console.log('No direct padding styles found');
-}
