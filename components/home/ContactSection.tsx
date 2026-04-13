@@ -17,7 +17,7 @@ export default function ContactSection() {
       <div className="container-custom">
 
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-20 lg:mb-24">
+        <div className="flex flex-col items-center text-center !mb-20 lg:!mb-24">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -52,7 +52,7 @@ export default function ContactSection() {
             transition={{ duration: 1, delay: 0.2 }}
             className="flex flex-col w-full lg:w-1/2"
           >
-            <p className="text-white/70 text-[16px] leading-[1.8] mb-24">
+            <p className="text-white/70 text-[16px] leading-[1.8] !mb-24">
               Whether it&apos;s a routine wellness check or an urgent concern, we&apos;re here to help.
               Reach out through any channel — we respond promptly.
             </p>
@@ -68,7 +68,7 @@ export default function ContactSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 + idx * 0.08 }}
-                    className="group flex items-center gap-10 py-10 border-b border-white/10 hover:border-[var(--gold)] transition-colors"
+                    className="group flex items-center gap-10 !py-10 border-b border-white/10 hover:border-[var(--gold)] transition-colors"
                   >
                     <div className="w-14 h-14 rounded-[1.25rem] bg-[var(--gold)] flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--gold-light)] transition-colors shadow-sm">
                       <Icon className="w-6 h-6 text-black" />
@@ -88,7 +88,7 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.7 }}
-              className="mt-12 lg:mt-16 block"
+              className="!mt-12 lg:!mt-16 block"
             >
               <Link
                 href="/contact"
@@ -106,53 +106,53 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="flex flex-col items-center justify-center bg-[var(--bg-dark-2)] rounded-[2rem] lg:rounded-[2.5rem] p-6 md:p-10 lg:p-14 shadow-xl border border-white/5 w-full lg:w-1/2"
+            className="flex flex-col items-center justify-center bg-[var(--bg-dark-2)] rounded-[2rem] lg:rounded-[2.5rem] !p-6 md:!p-10 lg:!p-14 shadow-xl border border-white/5 w-full lg:w-1/2"
           >
-            <h3 className="text-white font-bold text-[24px] lg:text-[28px] mb-8 lg:mb-10 tracking-tight text-center w-full">Send Us a Message</h3>
+            <h3 className="text-white font-bold text-[24px] lg:text-[28px] !mb-8 lg:!mb-10 tracking-tight text-center w-full">Send Us a Message</h3>
             <form className="flex flex-col items-center justify-center gap-6 w-full" onSubmit={(e) => e.preventDefault()}>
               <div className="w-full flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <div className="flex flex-col gap-2.5 w-full">
-                  <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase ml-1">First Name</label>
+                  <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase !ml-1">First Name</label>
                   <input
                     type="text"
                     placeholder="John"
-                    className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl px-5 py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20"
+                    className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl !px-5 !py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20"
                   />
                 </div>
                 <div className="flex flex-col gap-2.5 w-full">
-                  <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase ml-1">Last Name</label>
+                  <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase !ml-1">Last Name</label>
                   <input
                     type="text"
                     placeholder="Smith"
-                    className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl px-5 py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20"
+                    className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl !px-5 !py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2.5 w-full justify-center">
-                <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase ml-1">Email Address</label>
+                <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase !ml-1">Email Address</label>
                 <input
                   type="email"
                   placeholder="john@example.com"
-                  className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl px-5 py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20"
+                  className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl !px-5 !py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20"
                 />
               </div>
 
               <div className="flex flex-col gap-2.5 w-full justify-center">
-                <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase ml-1">Horse Name & Condition</label>
+                <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase !ml-1">Horse Name & Condition</label>
                 <input
                   type="text"
                   placeholder="e.g. Apollo — routine checkup"
-                  className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl px-5 py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20"
+                  className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl !px-5 !py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20"
                 />
               </div>
 
               <div className="flex flex-col gap-2.5 w-full justify-center">
-                <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase ml-1">Message</label>
+                <label className="text-[var(--gold)] text-[12px] lg:text-[13px] font-bold tracking-widest uppercase !ml-1">Message</label>
                 <textarea
                   rows={5}
                   placeholder="Tell us how we can help..."
-                  className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl px-5 py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20 resize-none"
+                  className="w-full bg-[var(--bg-dark)] border border-white/10 rounded-2xl !px-5 !py-4 text-[15px] lg:text-[16px] text-white placeholder-white/30 outline-none focus:border-[var(--gold)] transition-all shadow-inner hover:border-white/20 resize-none"
                 />
               </div>
 

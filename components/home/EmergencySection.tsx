@@ -38,7 +38,7 @@ export default function EmergencySection() {
             className="flex flex-col items-start"
           >
             {/* Live Badge */}
-            <div className="flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+            <div className="flex items-center gap-2 !mb-6 !px-4 !py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--gold)] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--gold)]"></span>
@@ -46,11 +46,11 @@ export default function EmergencySection() {
               <span className="text-[var(--gold)] font-black text-[10px] uppercase tracking-[0.2em]">Rapid Response Activated</span>
             </div>
 
-            <h2 className="text-white font-bold text-4xl lg:text-[62px] leading-[1.05] mb-6">
+            <h2 className="text-white font-bold text-4xl lg:text-[62px] leading-[1.05] !mb-6">
               Equine <span className="italic font-display font-medium text-[var(--gold)]">Emergency?</span>
             </h2>
             
-            <p className="text-white/60 text-lg lg:text-xl leading-relaxed max-w-lg mb-0">
+            <p className="text-white/60 text-lg lg:text-xl leading-relaxed max-w-lg !mb-0">
               When every second counts, our 24/7 mobile intensive care unit brings the hospital&apos;s advanced capabilities directly to your stable.
             </p>
           </motion.div>
@@ -63,12 +63,12 @@ export default function EmergencySection() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 p-8 lg:p-12 rounded-[3rem] shadow-2xl flex flex-col items-center text-center relative overflow-hidden group">
+            <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 !p-8 lg:!p-12 rounded-[3rem] shadow-2xl flex flex-col items-center text-center relative overflow-hidden group">
               {/* Internal glow effect */}
               <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-[var(--gold)]/5 rounded-full blur-[80px] pointer-events-none" />
               
               {/* SOS Pulse Visual */}
-              <div className="relative mb-8">
+              <div className="relative !mb-8">
                 <motion.div 
                   animate={{ scale: [1, 1.8, 1], opacity: [0.3, 0, 0.3] }}
                   transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }}
@@ -86,7 +86,7 @@ export default function EmergencySection() {
 
               <a
                 href="tel:+490000000000"
-                className="w-full bg-[var(--gold)] hover:bg-white text-black font-black text-lg lg:text-xl py-6 rounded-2xl transition-all duration-300 shadow-xl flex items-center justify-center gap-4 mb-6"
+                className="w-full bg-[var(--gold)] hover:bg-white text-black font-black text-lg lg:text-xl !py-6 rounded-2xl transition-all duration-300 shadow-xl flex items-center justify-center gap-4 !mb-6"
               >
                 Call +49 000 000 0000
                 <ArrowUpRight className="w-6 h-6" />
@@ -94,7 +94,7 @@ export default function EmergencySection() {
 
               <Link
                 href="/emergency"
-                className="text-white/40 hover:text-[var(--gold)] text-xs font-bold uppercase tracking-[0.2em] transition-colors flex items-center gap-2"
+                className="text-white/40 hover:text-[var(--gold)] text-xs font-bold uppercase tracking-[0.2em] transition-colors flex items-center gap-2 !mt-4"
               >
                 View Emergency Protocols
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)]/30" />

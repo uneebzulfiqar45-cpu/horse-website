@@ -43,14 +43,14 @@ export default function ToolsSection() {
               <span className="dot" />
               Smart Tools
             </div>
-            <h2 className="text-[var(--text-primary)] mb-6 leading-[1.1] text-4xl lg:text-[56px] font-bold">
+            <h2 className="text-[var(--text-primary)] !mb-6 leading-[1.1] text-4xl lg:text-[56px] font-bold">
               Smart <span className="italic font-display font-medium text-[var(--gold)]">Veterinary Tools</span>
             </h2>
-            <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
+            <p className="text-[var(--text-secondary)] leading-relaxed !mb-6">
               Practical tools designed for horse owners. Use them to better understand your horse&apos;s health — 
               and to know when to call the vet.
             </p>
-            <p className="text-[var(--text-subtle)] text-sm leading-relaxed mb-8">
+            <p className="text-[var(--text-subtle)] text-sm leading-relaxed !mb-8">
               ⚠️ All tools include medical disclaimers. They are for informational purposes only 
               and do not replace professional veterinary advice.
             </p>
@@ -71,10 +71,10 @@ export default function ToolsSection() {
                 <Link
                   key={tool.title}
                   href={tool.href}
-                  className="group block bg-[var(--bg-primary)] border border-[var(--border)] rounded-2xl p-5 hover:border-[var(--gold)]/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                  className="group block bg-[var(--bg-primary)] border border-[var(--border)] rounded-2xl !p-5 hover:border-[var(--gold)]/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
                 >
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+                    className="w-10 h-10 rounded-xl flex items-center justify-center !mb-4 group-hover:scale-110 transition-transform duration-300"
                     style={{
                       backgroundColor: `${tool.color}18`,
                       border: `1px solid ${tool.color}25`,
@@ -83,7 +83,7 @@ export default function ToolsSection() {
                     <Icon className="w-5 h-5" style={{ color: tool.color }} />
                   </div>
                   <h3
-                    className="text-[var(--text-primary)] font-semibold text-base mb-2 group-hover:text-[var(--gold)] transition-colors"
+                    className="text-[var(--text-primary)] font-semibold text-base !mb-2 group-hover:text-[var(--gold)] transition-colors"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {tool.title}

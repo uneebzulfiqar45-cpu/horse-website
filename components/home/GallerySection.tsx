@@ -45,7 +45,7 @@ export default function GallerySection() {
     <section className="section-light section-padding overflow-hidden">
       <div className="container-custom flex flex-col items-center">
         {/* Header container centered */}
-        <div className="flex flex-col items-center text-center mb-10 lg:mb-14">
+        <div className="flex flex-col items-center text-center !mb-10 lg:!mb-14">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,7 +61,7 @@ export default function GallerySection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 1 }}
-            className="text-[var(--text-primary)] text-3xl md:text-4xl lg:text-[46px] font-bold leading-[1.1] max-w-xl mt-4"
+            className="text-[var(--text-primary)] text-3xl md:text-4xl lg:text-[46px] font-bold leading-[1.1] max-w-xl !mt-4"
           >
             Captured moments from saddles, <br className="hidden md:block" />
             <span className="italic font-medium text-[var(--forest)] font-display">
@@ -82,7 +82,7 @@ export default function GallerySection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="flex w-full gap-3 lg:gap-4 overflow-x-auto no-scrollbar pb-4 px-4 md:px-8"
+            className="flex w-full gap-3 lg:gap-4 overflow-x-auto no-scrollbar !pb-4 !px-4 md:!px-8"
           >
             {displayImages.map((img, idx) => {
               return (
@@ -117,7 +117,7 @@ export default function GallerySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="text-center mt-6 lg:mt-8 text-[var(--text-secondary)] text-[10px] md:text-[12px] uppercase tracking-[0.1em] font-bold"
+          className="text-center !mt-6 lg:!mt-8 text-[var(--text-secondary)] text-[10px] md:text-[12px] uppercase tracking-[0.1em] font-bold"
         >
           Feel the freedom of the open field — <span className="text-[var(--gold)] transition-colors hover:text-[var(--gold-light)] cursor-pointer">start your riding journey with us now!</span>
         </motion.p>

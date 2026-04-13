@@ -116,30 +116,30 @@ export default function MembershipSection() {
               viewport={{ once: true }}
             >
               {/* Badge */}
-              <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[var(--gold)]/10 border border-[var(--gold)]/30 text-[var(--gold)] text-[11px] font-black uppercase tracking-[0.25em] mb-6">
+              <motion.div variants={itemVariants} className="inline-flex items-center gap-2 !px-5 !py-2 rounded-full bg-[var(--gold)]/10 border border-[var(--gold)]/30 text-[var(--gold)] text-[11px] font-black uppercase tracking-[0.25em] !mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] animate-pulse" />
                 Club Benefits
               </motion.div>
 
-              <motion.h2 variants={itemVariants} className="text-white mb-6 leading-[1.05] text-4xl lg:text-[52px] font-bold">
+              <motion.h2 variants={itemVariants} className="text-white !mb-6 leading-[1.05] text-4xl lg:text-[52px] font-bold">
                 Membership that rewards your{" "}
                 <span className="italic font-display font-medium text-[var(--gold)]">
                   passion for riding
                 </span>
               </motion.h2>
 
-              <motion.p variants={itemVariants} className="text-white/60 text-[15px] leading-relaxed mb-10 max-w-xl">
+              <motion.p variants={itemVariants} className="text-white/60 text-[15px] leading-relaxed !mb-10 max-w-xl">
                 Joining our club means more than learning to ride. It&apos;s about becoming part of a secure, supportive community where horses and humans thrive together.
               </motion.p>
 
               {/* Benefits grid */}
-              <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
+              <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-5 !mb-10">
                 {benefits.map((benefit, index) => {
                   const Icon = benefit.icon;
                   return (
                     <div
                       key={index}
-                      className="bg-[var(--bg-dark-2)] border border-white/6 p-6 rounded-2xl flex flex-col gap-3 transition-all duration-300 hover:border-[var(--gold)]/30 hover:shadow-[0_0_0_1px_rgba(200,169,106,0.2)] group"
+                      className="bg-[var(--bg-dark-2)] border border-white/6 !p-6 rounded-2xl flex flex-col gap-3 transition-all duration-300 hover:border-[var(--gold)]/30 hover:shadow-[0_0_0_1px_rgba(200,169,106,0.2)] group"
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-9 h-9 rounded-xl bg-[var(--gold)]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--gold)]/20 transition-colors">

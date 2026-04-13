@@ -91,7 +91,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="flex justify-center mb-4"
+          className="flex justify-center !mb-4"
         >
           <div className="pill-badge">
             <span className="dot" />
@@ -105,7 +105,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="text-center text-[var(--text-primary)] text-4xl lg:text-[56px] font-bold leading-[1.1] mb-16 max-w-3xl mx-auto"
+          className="text-center text-[var(--text-primary)] text-4xl lg:text-[56px] font-bold leading-[1.1] !mb-16 max-w-3xl mx-auto"
         >
           Their words, our pride,{" "}
           <span className="italic font-display font-medium text-[var(--gold)]">
@@ -144,7 +144,7 @@ export default function TestimonialsSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.5 }}
-              className="absolute bottom-6 left-6 bg-[var(--bg-dark-2)]/95 backdrop-blur-md py-3 px-5 rounded-2xl flex items-center gap-3 shadow-2xl border border-white/10"
+              className="absolute bottom-6 left-6 bg-[var(--bg-dark-2)]/95 backdrop-blur-md !py-3 !px-5 rounded-2xl flex items-center gap-3 shadow-2xl border border-white/10"
             >
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
@@ -154,12 +154,12 @@ export default function TestimonialsSection() {
               <div className="h-4 w-[1px] bg-white/20" />
               <span className="text-white font-bold text-sm tracking-tight">
                 5.0{" "}
-                <span className="text-white/50 font-medium ml-1">{t.tag}</span>
+                <span className="text-white/50 font-medium !ml-1">{t.tag}</span>
               </span>
             </motion.div>
 
             {/* Slide counter — top left */}
-            <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-white/80 text-xs font-bold tracking-widest">
+            <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full !px-4 !py-1.5 text-white/80 text-xs font-bold tracking-widest">
               {String(current + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
             </div>
           </div>
@@ -170,11 +170,11 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="bg-white flex flex-col justify-between p-10 lg:p-14"
+            className="bg-white flex flex-col justify-between !p-10 lg:!p-14"
           >
 
             {/* Decorative quote icon */}
-            <div className="text-[var(--gold-lighter)] mb-6">
+            <div className="text-[var(--gold-lighter)] !mb-6">
               <Quote className="w-14 h-14 fill-[var(--gold-lighter)] text-[var(--gold-lighter)]" />
             </div>
 
@@ -195,7 +195,7 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Divider */}
-            <div className="my-8 h-[1px] w-full bg-black/6" />
+            <div className="!my-8 h-[1px] w-full bg-black/6" />
 
             {/* Author + Navigation row */}
             <AnimatePresence mode="wait">
@@ -218,8 +218,8 @@ export default function TestimonialsSection() {
                   </div>
                   <div>
                     <div className="text-[var(--text-primary)] font-bold text-lg leading-tight">{t.name}</div>
-                    <div className="text-[var(--text-secondary)] text-[13px] mt-0.5">{t.role}</div>
-                    <div className="text-[var(--gold)] text-[12px] font-bold mt-1 uppercase tracking-wider">{t.stat}</div>
+                    <div className="text-[var(--text-secondary)] text-[13px] !mt-0.5">{t.role}</div>
+                    <div className="text-[var(--gold)] text-[12px] font-bold !mt-1 uppercase tracking-wider">{t.stat}</div>
                   </div>
                 </div>
 
@@ -280,7 +280,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-center"
+          className="!mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-center"
         >
           {[
             { num: "500+", label: "Happy Clients" },

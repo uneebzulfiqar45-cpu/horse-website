@@ -5,9 +5,9 @@ import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--bg-dark)] pt-20 pb-10 border-t border-white/10 text-white">
+    <footer className="bg-[var(--bg-dark)] !pt-20 !pb-10 border-t border-white/10 text-white">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16 border-b border-white/10 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 !mb-16 border-b border-white/10 !pb-16">
           
           {/* Brand Column */}
           <div className="flex flex-col gap-6">
@@ -20,7 +20,7 @@ export default function Footer() {
                 <div className="text-[var(--gold)] text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-accent)" }}>Practice</div>
               </div>
             </Link>
-            <p className="text-white/60 text-[15px] leading-relaxed pr-4">
+            <p className="text-white/60 text-[15px] leading-relaxed !pr-4">
               Providing elite veterinary care and performance optimization for sport and companion horses across Germany since 2019.
             </p>
           </div>
@@ -42,18 +42,18 @@ export default function Footer() {
             <h3 className="text-[18px] font-bold tracking-wide">Contact Us</h3>
             <div className="flex flex-col gap-5">
               <div className="flex items-start gap-4 text-white/60">
-                <Phone className="w-5 h-5 text-[var(--gold)] flex-shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-[var(--gold)] flex-shrink-0 !mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <a href="tel:+490000000000" className="hover:text-[var(--gold)] text-[15px] transition-colors">+49 000 000 0000</a>
                   <span className="text-xs text-white/40 uppercase tracking-wider">24/7 Emergency Line</span>
                 </div>
               </div>
               <div className="flex items-start gap-4 text-white/60">
-                <Mail className="w-5 h-5 text-[var(--gold)] flex-shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 text-[var(--gold)] flex-shrink-0 !mt-0.5" />
                 <a href="mailto:info@equivet.de" className="hover:text-[var(--gold)] text-[15px] transition-colors">info@equivet.de</a>
               </div>
               <div className="flex items-start gap-4 text-white/60">
-                <MapPin className="w-5 h-5 text-[var(--gold)] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[var(--gold)] flex-shrink-0 !mt-0.5" />
                 <span className="text-[15px] leading-relaxed">Pferdeallee 21<br />80331 München, Germany</span>
               </div>
             </div>
@@ -64,16 +64,16 @@ export default function Footer() {
             <h3 className="text-[18px] font-bold tracking-wide">Stay Updated</h3>
             <p className="text-white/60 text-[15px] leading-relaxed">Subscribe to our newsletter for insights on equine health and performance.</p>
 
-            <form className="flex mt-2 w-full h-[52px]" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex !mt-2 w-full h-[52px]" onSubmit={(e) => e.preventDefault()}>
               <input 
                 type="email" 
                 placeholder="Email Address..." 
-                className="flex-grow bg-white/5 text-white placeholder-white/30 px-5 outline-none rounded-l-xl border border-white/10 focus:border-[var(--gold)] text-[14px] transition-colors" 
+                className="flex-grow bg-white/5 text-white placeholder-white/30 !px-5 outline-none rounded-l-xl border border-white/10 focus:border-[var(--gold)] text-[14px] transition-colors" 
                 required
               />
               <button 
                 type="submit"
-                className="bg-[var(--gold)] text-black px-5 rounded-r-xl font-bold hover:bg-white transition-colors flex items-center justify-center"
+                className="bg-[var(--gold)] text-black !px-5 rounded-r-xl font-bold hover:bg-white transition-colors flex items-center justify-center"
               >
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 !pt-4">
           <p className="text-white/40 text-sm">
             © {new Date().getFullYear()} EquiVet Practice. All Rights Reserved.
           </p>

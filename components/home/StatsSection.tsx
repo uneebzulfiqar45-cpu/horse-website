@@ -104,13 +104,13 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="absolute top-20 left-0 bg-[var(--bg-dark-2)]/90 backdrop-blur-md border border-white/10 p-5 rounded-2xl shadow-2xl z-20"
+              className="absolute top-20 left-0 bg-[var(--bg-dark-2)]/90 backdrop-blur-md border border-white/10 !p-5 rounded-2xl shadow-2xl z-20"
             >
-              <div className="text-3xl font-bold text-white mb-1">
+              <div className="text-3xl font-bold text-white !mb-1">
                 <AnimatedNumber target={300} suffix="+" />
               </div>
               <div className="text-white/60 text-xs uppercase tracking-widest font-bold">Happy Riders</div>
-              <div className="mt-3 h-1 w-full bg-white/10 rounded-full overflow-hidden">
+              <div className="!mt-3 h-1 w-full bg-white/10 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "82%" }}
@@ -132,12 +132,12 @@ export default function StatsSection() {
               className="max-w-xl"
             >
               {/* Badge */}
-              <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[var(--gold)]/10 border border-[var(--gold)]/30 text-[var(--gold)] text-[11px] font-black uppercase tracking-[0.25em] mb-6">
+              <motion.div variants={itemVariants} className="inline-flex items-center gap-2 !px-5 !py-2 rounded-full bg-[var(--gold)]/10 border border-[var(--gold)]/30 text-[var(--gold)] text-[11px] font-black uppercase tracking-[0.25em] !mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] animate-pulse" />
                 Our Facts
               </motion.div>
 
-              <motion.h2 variants={itemVariants} className="text-white mb-6 leading-[1.05] text-4xl lg:text-[52px] font-bold">
+              <motion.h2 variants={itemVariants} className="text-white !mb-6 leading-[1.05] text-4xl lg:text-[52px] font-bold">
                 Measuring milestones in <br className="hidden lg:block" />
                 riders,{" "}
                 <span className="italic font-display font-medium text-[var(--gold)]">
@@ -145,17 +145,17 @@ export default function StatsSection() {
                 </span>
               </motion.h2>
 
-              <motion.p variants={itemVariants} className="text-white/60 text-[15px] leading-relaxed mb-8 max-w-lg">
+              <motion.p variants={itemVariants} className="text-white/60 text-[15px] leading-relaxed !mb-8 max-w-lg">
                 Discover key highlights of our equestrian club — world-class courses, expert instruction, exclusive member events, and a vibrant community designed to elevate every rider.
               </motion.p>
 
               {/* Stats grid */}
-              <motion.div variants={itemVariants} className="grid grid-cols-2 gap-px bg-white/10 rounded-2xl overflow-hidden mb-8">
+              <motion.div variants={itemVariants} className="grid grid-cols-2 gap-px bg-white/10 rounded-2xl overflow-hidden !mb-8">
                 {stats.map((stat, i) => {
                   const Icon = stat.icon;
                   return (
-                    <div key={i} className="bg-[var(--bg-dark-2)] p-6 flex flex-col gap-1">
-                      <Icon className="w-4 h-4 text-[var(--gold)] mb-2 opacity-70" />
+                    <div key={i} className="bg-[var(--bg-dark-2)] !p-6 flex flex-col gap-1">
+                      <Icon className="w-4 h-4 text-[var(--gold)] !mb-2 opacity-70" />
                       <div className="text-3xl font-bold text-white tracking-tight">
                         <AnimatedNumber target={stat.num} suffix={stat.suffix} />
                       </div>
@@ -166,7 +166,7 @@ export default function StatsSection() {
               </motion.div>
 
               {/* Feature checklist */}
-              <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8 mb-14">
+              <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8 !mb-14">
                 {features.map((f, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-[var(--gold)] flex-shrink-0">
@@ -176,7 +176,7 @@ export default function StatsSection() {
                   </div>
                 ))}
               </motion.div>
-              <motion.div variants={itemVariants} className="mt-10 lg:mt-14">
+              <motion.div variants={itemVariants} className="!mt-10 lg:!mt-14">
                 <Link
                   href="/contact"
                   className="btn btn-primary w-full md:w-auto"

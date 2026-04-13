@@ -36,7 +36,7 @@ export default function FAQSection() {
     <section className="section-light overflow-hidden section-padding">
       <div className="container-custom">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 !mb-16 lg:!mb-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -111,7 +111,7 @@ export default function FAQSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="flex items-center gap-5 pl-2 group"
+              className="flex items-center gap-5 !pl-2 group"
             >
               <div className="w-12 h-12 rounded-full bg-[var(--gold)] flex items-center justify-center text-black shadow-md flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-[var(--gold-light)]">
                 <Phone className="w-5 h-5 fill-current" />
@@ -124,7 +124,7 @@ export default function FAQSection() {
           </div>
 
           {/* Right Column (Accordion) */}
-          <div className="lg:col-span-7 flex flex-col lg:pl-6 pt-2">
+          <div className="lg:col-span-7 flex flex-col lg:!pl-6 !pt-2">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
@@ -138,9 +138,9 @@ export default function FAQSection() {
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="w-full flex items-center justify-between py-8 lg:py-10 text-left group"
+                    className="w-full flex items-center justify-between !py-8 lg:!py-10 text-left group"
                   >
-                    <span className={`text-[17px] lg:text-[19px] font-bold transition-colors pr-8 ${isOpen ? "text-[var(--gold)]" : "text-[var(--text-primary)] group-hover:text-[var(--gold)]"}`}>
+                    <span className={`text-[17px] lg:text-[19px] font-bold transition-colors !pr-8 ${isOpen ? "text-[var(--gold)]" : "text-[var(--text-primary)] group-hover:text-[var(--gold)]"}`}>
                       {faq.question}
                     </span>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 shadow-sm ${isOpen ? "bg-[var(--gold)] text-black" : "bg-black/5 text-[var(--text-primary)] group-hover:bg-[var(--gold)] group-hover:text-black"}`}>
@@ -156,7 +156,7 @@ export default function FAQSection() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <p className="text-[var(--text-secondary)] text-[16px] leading-[1.8] pb-10 lg:pb-12 pr-12">
+                        <p className="text-[var(--text-secondary)] text-[16px] leading-[1.8] !pb-10 lg:!pb-12 !pr-12">
                           {faq.answer}
                         </p>
                       </motion.div>

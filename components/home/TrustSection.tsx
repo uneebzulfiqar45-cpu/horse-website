@@ -55,7 +55,7 @@ export default function TrustSection() {
 
             <motion.h2 
               variants={itemVariants} 
-              className="text-[var(--text-primary)] text-4xl lg:text-[56px] font-bold leading-[1.1] mb-8"
+              className="text-[var(--text-primary)] text-4xl lg:text-[56px] font-bold leading-[1.1] !mb-8"
             >
               Exceptional benefits that <br className="hidden lg:block"/>
               set our <span className="italic font-display font-medium text-[var(--gold)]">horse club apart</span>
@@ -63,19 +63,19 @@ export default function TrustSection() {
 
             <motion.p 
               variants={itemVariants} 
-              className="text-[var(--text-secondary)] text-[16px] leading-[1.8] mb-12 max-w-lg"
+              className="text-[var(--text-secondary)] text-[16px] leading-[1.8] !mb-12 max-w-lg"
             >
               We’re more than just a riding facility — we’re a trusted partner in your equestrian journey. Every detail of our club is designed to ensure the best possible experience for both horse and rider.
             </motion.p>
 
-            <div className="flex flex-col gap-10 w-full mb-12">
+            <div className="flex flex-col gap-10 w-full !mb-12">
               {benefits.map((benefit, idx) => (
                 <motion.div key={idx} variants={itemVariants} className="flex gap-6 group">
                   <div className="w-14 h-14 rounded-full bg-[var(--bg-dark)]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--gold)] transition-colors duration-300">
                     <Check className="w-6 h-6 text-[var(--bg-dark)] group-hover:text-black transition-colors duration-300" strokeWidth={3} />
                   </div>
                   <div className="flex flex-col">
-                    <h4 className="text-[var(--text-primary)] text-xl font-bold mb-2">{benefit.title}</h4>
+                    <h4 className="text-[var(--text-primary)] text-xl font-bold !mb-2">{benefit.title}</h4>
                     <p className="text-[var(--text-secondary)] text-[15px] leading-relaxed max-w-sm">
                       {benefit.desc}
                     </p>
@@ -134,7 +134,7 @@ export default function TrustSection() {
                     className="w-full h-full"
                   />
                  {/* Visual Overlay Card */}
-                 <div className="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl flex items-center gap-3">
+                 <div className="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 !p-4 rounded-xl flex items-center gap-3">
                    <div className="w-10 h-10 rounded-full bg-[var(--gold)] flex items-center justify-center flex-shrink-0">
                       <Star className="w-5 h-5 text-[var(--bg-primary)] fill-current" />
                    </div>
@@ -164,9 +164,9 @@ export default function TrustSection() {
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
                  transition={{ delay: 0.6, duration: 0.8 }}
-                 className="absolute bottom-10 left-[-5%] z-30 bg-[var(--bg-dark-2)] p-6 lg:p-8 rounded-[2rem] shadow-2xl border border-white/5 flex flex-col items-center gap-3 min-w-[200px]"
+                 className="absolute bottom-10 left-[-5%] z-30 bg-[var(--bg-dark-2)] !p-6 lg:!p-8 rounded-[2rem] shadow-2xl border border-white/5 flex flex-col items-center gap-3 min-w-[200px]"
                >
-                 <div className="flex items-center justify-center gap-1 mb-1">
+                 <div className="flex items-center justify-center gap-1 !mb-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-3 h-3 text-[var(--gold)] fill-current" />
                     ))}

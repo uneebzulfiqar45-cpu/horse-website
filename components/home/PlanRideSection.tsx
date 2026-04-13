@@ -67,7 +67,7 @@ export default function PlanRideSection() {
       <div className="container-custom relative z-10">
 
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="flex flex-col items-center text-center !mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -84,7 +84,7 @@ export default function PlanRideSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 1 }}
-            className="text-[var(--text-primary)] text-4xl lg:text-[52px] font-bold leading-[1.1] tracking-tight mb-4 max-w-3xl"
+            className="text-[var(--text-primary)] text-4xl lg:text-[52px] font-bold leading-[1.1] tracking-tight !mb-4 max-w-3xl"
           >
             Every rider&apos;s path starts here —{" "}
             <span className="italic font-display font-medium text-[var(--gold)]">choose your plan</span>
@@ -110,7 +110,7 @@ export default function PlanRideSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: i * 0.15, ease: "easeOut" }}
-              className={`relative rounded-[1.75rem] flex flex-col transition-all duration-400 hover:-translate-y-2 ${
+              className={`relative !p-4 rounded-[1.75rem] flex flex-col transition-all duration-400 hover:-translate-y-2 ${
                 plan.isPopular
                   ? "bg-[var(--bg-dark-2)] shadow-[0_24px_80px_-12px_rgba(15,42,30,0.4)] scale-105 z-10"
                   : "bg-white border border-black/6 shadow-md hover:shadow-xl hover:border-[var(--gold)]/30"
@@ -118,7 +118,7 @@ export default function PlanRideSection() {
             >
               {/* Popular badge */}
               {plan.isPopular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-[var(--gold)] text-black text-[11px] font-black uppercase tracking-[0.2em] px-4 py-1.5 rounded-full shadow-md">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-[var(--gold)] text-black text-[11px] font-black uppercase tracking-[0.2em] !px-4 !py-1.5 rounded-full shadow-md">
                   <Sparkles className="w-3 h-3" />
                   Most Popular
                 </div>
@@ -126,28 +126,28 @@ export default function PlanRideSection() {
 
               <div className={`p-8 lg:p-10 flex flex-col flex-1 ${plan.isPopular ? "pt-12" : ""}`}>
                 {/* Plan label */}
-                <div className={`text-[11px] font-black uppercase tracking-[0.2em] mb-2 ${plan.isPopular ? "text-[var(--gold)]" : "text-[var(--text-secondary)]"}`}>
+                <div className={`text-[11px] font-black uppercase tracking-[0.2em] !mb-2 ${plan.isPopular ? "text-[var(--gold)]" : "text-[var(--text-secondary)]"}`}>
                   {plan.tagline}
                 </div>
 
-                <h3 className={`text-[22px] font-bold mb-3 ${plan.isPopular ? "text-white" : "text-[var(--text-primary)]"}`}>
+                <h3 className={`text-[22px] font-bold !mb-3 ${plan.isPopular ? "text-white" : "text-[var(--text-primary)]"}`}>
                   {plan.title}
                 </h3>
 
-                <p className={`text-[14px] leading-relaxed mb-6 ${plan.isPopular ? "text-white/60" : "text-[var(--text-secondary)]"}`}>
+                <p className={`text-[14px] leading-relaxed !mb-6 ${plan.isPopular ? "text-white/60" : "text-[var(--text-secondary)]"}`}>
                   {plan.description}
                 </p>
 
                 {/* Divider */}
-                <div className={`w-full h-px mb-6 ${plan.isPopular ? "bg-white/10" : "bg-black/8"}`} />
+                <div className={`w-full h-px !mb-6 ${plan.isPopular ? "bg-white/10" : "bg-black/8"}`} />
 
                 {/* Price */}
-                <div className="flex items-end gap-2 mb-8">
+                <div className="flex items-end gap-2 !mb-8">
                   <span className={`text-[13px] font-bold ${plan.isPopular ? "text-white/50" : "text-[var(--text-secondary)]"}`}>$</span>
                   <span className={`text-[52px] font-bold tracking-tight leading-none ${plan.isPopular ? "text-white" : "text-[var(--text-primary)]"}`}>
                     {plan.price}
                   </span>
-                  <span className={`text-[13px] font-semibold pb-2 ${plan.isPopular ? "text-white/50" : "text-[var(--text-secondary)]"}`}>
+                  <span className={`text-[13px] font-semibold !pb-2 ${plan.isPopular ? "text-white/50" : "text-[var(--text-secondary)]"}`}>
                     / mo
                   </span>
                 </div>
@@ -164,7 +164,7 @@ export default function PlanRideSection() {
                 <ul className="flex flex-col gap-3.5 mt-auto">
                   {plan.features.map((f, fi) => (
                     <li key={fi} className="flex items-start gap-3">
-                      <CheckCircle2 className={`w-[17px] h-[17px] flex-shrink-0 mt-0.5 ${plan.isPopular ? "text-[var(--gold)]" : "text-[var(--bg-dark-2)]"}`} />
+                      <CheckCircle2 className={`w-[17px] h-[17px] flex-shrink-0 !mt-0.5 ${plan.isPopular ? "text-[var(--gold)]" : "text-[var(--bg-dark-2)]"}`} />
                       <span className={`text-[14px] leading-snug ${plan.isPopular ? "text-white/80" : "text-[var(--text-secondary)]"}`}>
                         {f}
                       </span>
@@ -182,7 +182,7 @@ export default function PlanRideSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.45 }}
-          className="mt-14 flex flex-wrap items-center justify-center gap-x-10 gap-y-5"
+          className="!mt-14 flex flex-wrap items-center justify-center gap-x-10 gap-y-5"
         >
           {guarantees.map((item, idx) => {
             const Icon = item.icon;

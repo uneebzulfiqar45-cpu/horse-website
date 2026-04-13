@@ -38,7 +38,7 @@ export default function ServicesSection() {
       <div className="container-custom">
         
         {/* Header content matching screenshot layout exactly */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 !mb-16 !lg:mb-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -108,7 +108,7 @@ export default function ServicesSection() {
                 <div className="absolute inset-x-0 bottom-0 p-6 flex flex-row items-end justify-between gap-4 z-30">
                   <div className="flex-1">
                     {/* Changed h3 to div to prevent user's global CSS from making font massive */}
-                    <div className="text-white !text-[16px] lg:!text-[18px] font-bold leading-[1.3] drop-shadow-md tracking-wide" style={{ fontFamily: 'system-ui, sans-serif' }}>
+                    <div className="text-white !text-[16px] !p-2 lg:!text-[18px] font-bold leading-[1.3] drop-shadow-md tracking-wide" style={{ fontFamily: 'system-ui, sans-serif' }}>
                       {card.line1}<br />{card.line2}
                     </div>
                   </div>
@@ -131,14 +131,14 @@ export default function ServicesSection() {
           style={{ marginTop: "120px", paddingBottom: "20px" }}
         >
           <div className="flex items-center gap-3">
-            <span className="px-4 py-1.5 rounded-full bg-[var(--forest)] text-white text-[13px] font-bold uppercase tracking-wide shadow-sm">
+            <span className="!px-4 py-1.5 rounded-full bg-[var(--forest)] text-white text-[13px] font-bold uppercase tracking-wide shadow-sm">
               Free
             </span>
             <p className="text-[var(--text-secondary)] text-[15px] font-medium">
               Let&apos;s make something great work together{" "}
               <Link
                 href="/contact"
-                className="italic text-[var(--gold)] hover:text-[var(--gold-light)] transition-colors ml-1"
+                className="italic text-[var(--gold)] hover:text-[var(--gold-light)] transition-colors !ml-1"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Get Free Quote

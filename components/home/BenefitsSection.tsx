@@ -57,7 +57,7 @@ export default function BenefitsSection() {
 
             <motion.h2 
               variants={itemVariants} 
-              className="text-[var(--text-primary)] text-4xl lg:text-[56px] font-bold leading-[1.1] mb-8"
+              className="text-[var(--text-primary)] text-4xl lg:text-[56px] font-bold leading-[1.1] !mb-8"
             >
               Why our members love <br />
               <span className="italic font-display font-medium text-[var(--gold)]">every ride they take</span>
@@ -65,12 +65,12 @@ export default function BenefitsSection() {
 
             <motion.p 
               variants={itemVariants} 
-              className="text-[var(--text-secondary)] text-[16px] leading-[1.8] mb-10 max-w-lg"
+              className="text-[var(--text-secondary)] text-[16px] leading-[1.8] !mb-10 max-w-lg"
             >
               Enjoy personalized treatments, expert guidance, and natural-looking results that enhance your beauty and boost.
             </motion.p>
 
-            <div className="flex flex-col gap-6 w-full mb-12">
+            <div className="flex flex-col gap-6 w-full !mb-12">
               {[
                 "Certified instructors dedicated to safety, skill-building",
                 "A warm and welcoming space for kids."
@@ -87,7 +87,7 @@ export default function BenefitsSection() {
             <motion.div variants={itemVariants}>
               <Link
                 href="/contact"
-                className="btn btn-primary group px-10 py-5 h-auto text-[15px]"
+                className="btn btn-primary group !px-10 !py-5 h-auto text-[15px]"
               >
                 Contact Us
                 <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -108,9 +108,9 @@ export default function BenefitsSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: idx * 0.1 }}
                     whileHover={{ y: -10 }}
-                    className="bg-[#f2efe8] p-8 lg:p-10 rounded-[1.5rem] border border-black/5 flex flex-col items-start text-left shadow-sm group hover:shadow-xl hover:bg-white transition-all duration-300"
+                    className="bg-[#f2efe8] !p-8 lg:!p-10 rounded-[1.5rem] border border-black/5 flex flex-col items-start text-left shadow-sm group hover:shadow-xl hover:bg-white transition-all duration-300"
                   >
-                    <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-8 shadow-sm group-hover:bg-[var(--gold)] transition-colors duration-300">
+                    <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center !mb-8 shadow-sm group-hover:bg-[var(--gold)] transition-colors duration-300">
                       <Icon className="w-8 h-8 text-[var(--gold)] group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                     </div>
                     <h4 className="text-[var(--text-primary)] text-lg font-bold mb-4">{feature.title}</h4>

@@ -110,18 +110,18 @@ export default function AboutSection() {
                   About Us
                 </div>
 
-                <h2 className="text-[var(--text-primary)] mb-8 leading-[1.1] text-4xl lg:text-[64px] font-bold">
+                <h2 className="text-[var(--text-primary)] !mb-8 leading-[1.1] text-4xl lg:text-[64px] font-bold">
                   Building riders&apos; confidence, <br className="hidden lg:block"/>
                   skill, <span className="italic font-display font-medium text-[var(--gold)]">and connection</span>
                 </h2>
 
-                <p className="text-[var(--text-secondary)] text-lg leading-[1.8] mb-12 max-w-2xl font-medium">
+                <p className="text-[var(--text-secondary)] text-lg leading-[1.8] !mb-12 max-w-2xl font-medium">
                   We are more than just a riding club — we are a vibrant community united by our love for horses. For over 80 years, we&apos;ve welcomed riders of all ages and skill levels to experience the joy.
                 </p>
 
-                <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-24 mb-16 relative">
+                <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-24 !mb-16 relative">
                   <div className="flex-1">
-                    <h4 className="text-[var(--text-primary)] text-xl font-bold mb-8">Our Mission:</h4>
+                    <h4 className="text-[var(--text-primary)] text-xl font-bold !mb-8">Our Mission:</h4>
                     <ul className="space-y-4">
                       {["Ensures the health and welfare of our animals.", "Pure, Wholesome Dairy Products You Can Trust.", "Deliver fresh, high-quality dairy products by caring."].map((point, index) => (
                         <li key={index} className="flex items-start gap-4 text-[var(--text-secondary)] font-medium text-[15px]">
@@ -147,10 +147,10 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 1.2 }}
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14 border-t border-black/10 pt-14">
-                  <div className="flex items-start gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 !mb-14 border-t border-black/10 pt-14">
+                  <div className="flex items-start gap-5 ">
                     <div className="w-12 h-12 rounded-full bg-[var(--bg-dark-2)] flex items-center justify-center flex-shrink-0 text-white shadow-md">
-                      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current mb-1">
                         <path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3" />
                       </svg>
                     </div>

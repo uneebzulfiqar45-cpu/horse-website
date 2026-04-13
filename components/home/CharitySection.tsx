@@ -52,8 +52,8 @@ export default function CharitySection() {
       </div>
 
       {/* Main Content Container */}
-      <div className="container-custom relative z-20 w-full px-6 lg:px-16">
-        <div className="flex flex-col mt-4 md:ml-4 w-full max-w-4xl">
+      <div className="container-custom relative z-20 w-full !px-6 lg:!px-16">
+        <div className="flex flex-col !mt-4 md:!ml-4 w-full max-w-4xl">
           
           {/* Header Area */}
           <div className="flex flex-col w-full md:max-w-xl">
@@ -75,7 +75,7 @@ export default function CharitySection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1, duration: 1 }}
-              className="text-[var(--text-primary)] text-[32px] md:text-[42px] font-bold leading-[1.1] mb-6 tracking-tight"
+              className="text-[var(--text-primary)] text-[32px] md:text-[42px] font-bold leading-[1.1] !mb-6 tracking-tight"
             >
               Equine Welfare <br className="hidden md:block"/>
               Beyond Borders
@@ -87,14 +87,14 @@ export default function CharitySection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="text-[var(--text-secondary)] text-[15px] leading-[1.75] max-w-[450px] mb-2 font-medium"
+              className="text-[var(--text-secondary)] text-[15px] leading-[1.75] max-w-[450px] !mb-2 font-medium"
             >
               We believe every horse — regardless of owner wealth or geography — deserves basic veterinary care. Our charity work brings free and subsidized care to underserved equine communities around the world.
             </motion.p>
           </div>
 
           {/* 2-Column Data Area */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 mt-10 border-t border-[var(--border)] pt-10 mr-4 md:mr-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 !mt-10 border-t border-[var(--border)] !pt-10 !mr-4 md:!mr-16">
             
             {/* Column 1: Impact Stats */}
             <div className="flex flex-col gap-6 md:gap-8 justify-center">
@@ -112,14 +112,14 @@ export default function CharitySection() {
                   className="flex flex-col"
                 >
                   <span className="text-[var(--text-primary)] font-black text-[28px] tracking-tight">{stat.num}</span>
-                  <span className="text-[var(--forest)] text-[10px] tracking-[0.15em] uppercase font-bold mt-1.5">{stat.label}</span>
+                  <span className="text-[var(--forest)] text-[10px] tracking-[0.15em] uppercase font-bold !mt-1.5">{stat.label}</span>
                 </motion.div>
               ))}
             </div>
 
             {/* Column 2: Initiatives List & Action */}
             <div className="flex flex-col justify-center">
-              <div className="flex flex-col gap-6 mb-10">
+              <div className="flex flex-col gap-6 !mb-10">
                 {initiatives.map((init, idx) => (
                   <motion.div 
                     key={init.region}
@@ -129,7 +129,7 @@ export default function CharitySection() {
                     transition={{ delay: 0.4 + (idx * 0.1), duration: 1 }}
                     className="flex flex-col"
                   >
-                    <span className="text-[#A27A29] font-bold tracking-widest text-[13px] uppercase mb-1">{init.region}</span>
+                    <span className="text-[#A27A29] font-bold tracking-widest text-[13px] uppercase !mb-1">{init.region}</span>
                     <span className="text-[var(--text-primary)] font-medium text-[13px] leading-relaxed max-w-[280px]">{init.desc}</span>
                   </motion.div>
                 ))}

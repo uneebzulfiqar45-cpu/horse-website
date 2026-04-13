@@ -57,7 +57,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="absolute top-0 left-0 right-0 z-50 py-4 md:py-6 bg-transparent">
+      <header className="absolute top-0 left-0 right-0 z-50 !py-4 md:!py-6 bg-transparent">
 
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -91,7 +91,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "flex items-center gap-1 px-3 py-2 text-xs font-semibold uppercase tracking-widest transition-all duration-200 text-white/80 hover:text-[var(--gold)]"
+                      "flex items-center gap-1 !px-3 !py-2 text-xs font-semibold uppercase tracking-widest transition-all duration-200 text-white/80 hover:text-[var(--gold)]"
                     )}
                     style={{ fontFamily: "var(--font-accent)" }}
                   >
@@ -158,7 +158,7 @@ export default function Header() {
           )}
         >
           {/* Drawer Header */}
-          <div className="flex items-center justify-between p-6 border-b border-white/10">
+          <div className="flex items-center justify-between !p-6 border-b border-white/10">
             <Link href="/" className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-[var(--gold)] flex items-center justify-center">
                 <span className="text-[var(--bg-dark)] font-bold" style={{ fontFamily: "Georgia, serif" }}>E</span>
@@ -180,7 +180,7 @@ export default function Header() {
           {/* Emergency Alert */}
           <a
             href="tel:+490000000000"
-            className="flex items-center gap-3 mx-4 mt-4 p-4 bg-[rgba(192,57,43,0.15)] border border-[rgba(192,57,43,0.3)] rounded-xl text-[#E74C3C] hover:bg-[rgba(192,57,43,0.25)] transition-colors"
+            className="flex items-center gap-3 !mx-4 !mt-4 !p-4 bg-[rgba(192,57,43,0.15)] border border-[rgba(192,57,43,0.3)] rounded-xl text-[#E74C3C] hover:bg-[rgba(192,57,43,0.25)] transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             <div className="w-10 h-10 rounded-full bg-[#C0392B] flex items-center justify-center flex-shrink-0">
@@ -193,14 +193,14 @@ export default function Header() {
           </a>
 
           {/* Nav Items */}
-          <nav className="flex-1 p-4 space-y-1">
+          <nav className="flex-1 !p-4 space-y-1">
             {navItems.map((item) => (
               <div key={item.label}>
                 <Link
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
                   className={cn(
-                    "block px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-150",
+                    "block !px-4 !py-3 rounded-lg text-sm font-medium transition-colors duration-150",
                     "text-white/80 hover:text-[var(--gold)] hover:bg-[var(--gold)]/10",
                     item.label === "Emergency" && "text-[#E74C3C] hover:text-[#E74C3C]"
                   )}
@@ -215,7 +215,7 @@ export default function Header() {
                         key={child.label}
                         href={child.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block px-4 py-2 rounded-lg text-xs text-white/50 hover:text-[var(--gold)] hover:bg-[var(--gold)]/10 transition-colors"
+                        className="block !px-4 !py-2 rounded-lg text-xs text-white/50 hover:text-[var(--gold)] hover:bg-[var(--gold)]/10 transition-colors"
                         style={{ fontFamily: "var(--font-accent)" }}
                       >
                         — {child.label}
@@ -228,11 +228,11 @@ export default function Header() {
           </nav>
 
           {/* Bottom CTA */}
-          <div className="p-4 border-t border-white/10 space-y-3">
+          <div className="!p-4 border-t border-white/10 space-y-3">
             <Link
               href="/login"
               onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-white/20 text-[var(--gold)] text-sm font-semibold hover:bg-[var(--gold)]/10 transition-colors"
+              className="flex items-center justify-center gap-2 w-full !py-3 rounded-xl border border-white/20 text-[var(--gold)] text-sm font-semibold hover:bg-[var(--gold)]/10 transition-colors"
               style={{ fontFamily: "var(--font-accent)" }}
             >
               <LogIn className="w-4 h-4" />

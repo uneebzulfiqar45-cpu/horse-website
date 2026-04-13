@@ -42,7 +42,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-dark)]/30 via-transparent to-[var(--bg-dark)]/20" />
       </div>
 
-      <div className="container-custom relative z-10 pt-20">
+      <div className="container-custom relative z-10 !pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div 
@@ -51,7 +51,7 @@ export default function HeroSection() {
             transition={{ duration: 1 }}
             className="max-w-2xl"
           >
-            <h1 className="text-white text-5xl md:text-7xl lg:text-[84px] font-bold leading-[1.05] mb-8">
+            <h1 className="text-white text-5xl md:text-7xl lg:text-[84px] font-bold leading-[1.05] !mb-8">
               Exceptional care for <span className="italic font-display font-medium text-[var(--gold)]">elite</span> equine partners
             </h1>
             
@@ -62,10 +62,10 @@ export default function HeroSection() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                <p className="text-[var(--text-on-dark-secondary)] text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
+                <p className="text-[var(--text-on-dark-secondary)] text-lg md:text-xl leading-relaxed !mb-10 max-w-lg">
                   Join our community of owners, trainers, and sport horse professionals who prioritize precision medical care and performance optimization.
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 !mb-10">
                   <Link
                     href="/contact"
                     className="btn btn-primary"
@@ -86,7 +86,7 @@ export default function HeroSection() {
             className="lg:pl-12 flex flex-col gap-8 items-start lg:items-end text-left lg:text-right"
           >
             <div className="max-w-md">
-              <p className="text-[var(--text-on-dark-secondary)] text-base md:text-lg mb-8 leading-relaxed">
+              <p className="text-[var(--text-on-dark-secondary)] text-base md:text-lg !mb-8 leading-relaxed">
                 We bring world-class diagnostic imaging and sports medicine directly to your stable, serving elite horses across Germany.
               </p>
               
